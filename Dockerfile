@@ -47,5 +47,4 @@ RUN mkdir -p $PASS_DIR/build && cd $PASS_DIR/build && \
     cmake -DLT_LLVM_INSTALL_DIR=$LLVM_DIR $PASS_DIR && \
     make -j $(nproc --all) 
 
-USER opam
-
+ENTRYPOINT ["/home/opam/build.sh"]
