@@ -1,11 +1,11 @@
 #!/bin/bash
 
 
-INPUT_FILE="/input/$1"
-INPUT_FILE_BC="/input/$1.bc"
-INPUT_FILE_BCI="/input/$1.bci"
-INPUT_FILE_OBJ="/input/$1.o"
-INPUT_FILE_EXE="/input/$1.exe"
+INPUT_FILE="input/$1"
+INPUT_FILE_BC="input/$1.bc"
+INPUT_FILE_BCI="input/$1.bci"
+INPUT_FILE_OBJ="input/$1.o"
+INPUT_FILE_EXE="input/$1.exe"
 
 
 if [ "$#" -eq 1 ] && [[ -f $INPUT_FILE ]]; then

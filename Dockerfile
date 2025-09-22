@@ -37,11 +37,10 @@ RUN opam update
 RUN opam install frama-c
 RUN eval $(opam env)
 
-USER root
-COPY PrintBBUIDs/build.sh /home/opam
+COPY --chown=opam:opam PrintBBUIDs/build.sh /home/opam
 RUN chmod +x /home/opam/build.sh
 
-COPY PrintBBUIDs/ ${PASS_DIR}
+COPY --chown=opam:opam PrintBBUIDs/ ${PASS_DIR}
 
 RUN mkdir -p $PASS_DIR/build && cd $PASS_DIR/build && \
     cmake -DLT_LLVM_INSTALL_DIR=$LLVM_DIR $PASS_DIR && \
