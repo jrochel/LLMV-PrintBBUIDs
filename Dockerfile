@@ -34,7 +34,7 @@ RUN pip3 install lit
 
 # Install framac
 RUN opam update
-RUN opam install frama-c
+RUN opam install frama-c.33.0~beta
 RUN eval $(opam env)
 
 COPY --chown=opam:opam PrintBBUIDs/build.sh /home/opam
