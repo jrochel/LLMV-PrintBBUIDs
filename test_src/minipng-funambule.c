@@ -48,8 +48,9 @@ char* read_block (FILE* f, char* block_type, unsigned int* block_len) {
       fatal_error ("Unexpected error while reading a block type");
   }
   *block_len = read_uint32(f);
+  char* res;
   if (*block_len > 0)
-    char* res = (char*) malloc (*block_len);
+    res = (char*) malloc (*block_len);
   if (res == NULL)
     fatal_error ("Unable to allocate a block");
   n = fread (res, 1, *block_len, f);
