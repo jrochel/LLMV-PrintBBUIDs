@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 INPUT_FILE="input/$1"
 INPUT_FILE_BC="input/$1.bc"

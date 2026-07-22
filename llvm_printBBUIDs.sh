@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 DOCKER_TAG="llvm_print-bb-uids"
 
 if [ "$#" -eq 1 ] && [[ -f $1 ]]; then
